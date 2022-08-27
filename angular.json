@@ -3,32 +3,32 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "my-epic-app": {
+    "coach-log": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/my-epic-app",
-      "sourceRoot": "projects/my-epic-app/src",
-      "prefix": "my-org",
+      "root": "projects/coach-log",
+      "sourceRoot": "projects/coach-log/src",
+      "prefix": "cl-app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-epic-app",
-            "index": "projects/my-epic-app/src/index.html",
-            "main": "projects/my-epic-app/src/main.ts",
-            "polyfills": "projects/my-epic-app/src/polyfills.ts",
-            "tsConfig": "projects/my-epic-app/tsconfig.app.json",
+            "outputPath": "dist/coach-log",
+            "index": "projects/coach-log/src/index.html",
+            "main": "projects/coach-log/src/main.ts",
+            "polyfills": "projects/coach-log/src/polyfills.ts",
+            "tsConfig": "projects/coach-log/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/my-epic-app/src/favicon.ico",
-              "projects/my-epic-app/src/assets"
+              "projects/coach-log/src/favicon.ico",
+              "projects/coach-log/src/assets"
             ],
             "styles": [
-              "projects/my-epic-app/src/styles.scss"
+              "projects/coach-log/src/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/my-epic-app/src/environments/environment.ts",
-                  "with": "projects/my-epic-app/src/environments/environment.prod.ts"
+                  "replace": "projects/coach-log/src/environments/environment.ts",
+                  "with": "projects/coach-log/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -66,33 +66,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-epic-app:build"
+            "browserTarget": "coach-log:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-epic-app:build:production"
+              "browserTarget": "coach-log:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-epic-app:build"
+            "browserTarget": "coach-log:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/my-epic-app/src/test.ts",
-            "polyfills": "projects/my-epic-app/src/polyfills.ts",
-            "tsConfig": "projects/my-epic-app/tsconfig.spec.json",
-            "karmaConfig": "projects/my-epic-app/karma.conf.js",
+            "main": "projects/coach-log/src/test.ts",
+            "polyfills": "projects/coach-log/src/polyfills.ts",
+            "tsConfig": "projects/coach-log/tsconfig.spec.json",
+            "karmaConfig": "projects/coach-log/karma.conf.js",
             "assets": [
-              "projects/my-epic-app/src/favicon.ico",
-              "projects/my-epic-app/src/assets"
+              "projects/coach-log/src/favicon.ico",
+              "projects/coach-log/src/assets"
             ],
             "styles": [
-              "projects/my-epic-app/src/styles.scss"
+              "projects/coach-log/src/styles.scss"
             ],
             "scripts": []
           }
@@ -101,9 +101,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/my-epic-app/tsconfig.app.json",
-              "projects/my-epic-app/tsconfig.spec.json",
-              "projects/my-epic-app/e2e/tsconfig.json"
+              "projects/coach-log/tsconfig.app.json",
+              "projects/coach-log/tsconfig.spec.json",
+              "projects/coach-log/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -113,16 +113,16 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/my-epic-app/e2e/protractor.conf.js",
-            "devServerTarget": "my-epic-app:serve"
+            "protractorConfig": "projects/coach-log/e2e/protractor.conf.js",
+            "devServerTarget": "coach-log:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-epic-app:serve:production"
+              "devServerTarget": "coach-log:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "my-epic-app"
+  "defaultProject": "coach-log"
 }
